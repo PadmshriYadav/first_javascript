@@ -41,3 +41,50 @@ console.log(Boolean (""));//empty--->false
 
 console.log(typeof  (false));
 
+
+
+//--------operations------
+
+let value = 3;
+ 
+let negvalue = -value
+
+console.log(negvalue)
+
+console.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2**3);
+console.log(2/3);
+console.log(2%3);
+
+
+let str1 = "hello"
+
+let str2 = " hansa"
+console.log( str1 + str2 )
+
+console.log("1" + "2") // str..12
+
+console.log(1+ "2")//str..12
+
+console.log("1" + "2"+ "2")//122
+
+console.log("1" + 2 + 2 )//122
+
+console.log( 1 + 2 + "2" )//32
+
+let bag=20;
+console.log(++bag);
+
+console.log(+""); //0 
+
+
+
+console.log(null > 0);//faslse
+console.log(null == 0);//false
+console.log(null >= 0);//true
+//comparison operators >,< are difrrnt from equlity check ==
+
+console.log("2" >1); //true...string--->num
+console.log("02" > 1);//true
