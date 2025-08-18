@@ -1,33 +1,16 @@
-// const score = 400
+const score = 400
 
-// const balance = new Number(100) // balance is obj of Numbers
-// // score = 452
-// // you write score = 451 after declaring score with const, you will get a TypeErrorm
- 
-// console.log(balance); //[Number: 100]
+ const balance = new Number(100) // balance is obj of Numbers
+ // score = 452
+// you write score = 451 after declaring score with const, you will get a TypeEconsole.log(balance); //[Number:  console.log(score);   //400    console.log(balance.toString());//100 is now a s console.log(balance.toString().len console.log(balance.toFixed(2));//100.00//return string typeconst otherNumber = 12.495console.log(otherNumber.toPrecision(2));//console.log(otherNumber.toPrecision(3));//12console.log(otherNumber.toFixed(3));//12.496
 
-// console.log(score);   //400        
-// console.log(balance.toString());//100 is now a string
-// console.log(balance.toString().length);
-// console.log(balance.toFixed(2));//100.00//return string type
-
-
-// const otherNumber = 12.49587
-// console.log(otherNumber.toPrecision(2));//12
-// console.log(otherNumber.toPrecision(3));//12.5
-// console.log(otherNumber.toFixed(3));//12.496
-
-
-// //+++++++++++maths++++++++++++
-
-// console.log(Math);//Object [Math] {}
-// console.log(Math.abs(-4));//4
-// console.log(Math.round(4.6));//5
-// console.log(Math.round(4.3));//4
-// console.log(Math.ceil(4.6));//5
-// console.log(Math.ceil(4.2));//5
-// console.log(Math.min(4,8,7,51,2));//2
-// console.log(Math.min(4,8,45,61));//4
+ //+++++++++++maths++++++++++++
+ console.log(Math);//Object [Math] {}
+console.log(Math.abs(-4));//4
+console.log(Math.round(4.6));//5
+console.log(Math.round(4.3));//4
+console.log(Math.ceil(4.6));//5 console.log(Math.ceil(4.2));//5 console.log(Math.min(4,8,7,51,2));//2
+console.log(Math.min(4,8,45,61));//4
 
 /*
 Math.floor()	Rounds down to the nearest integer 	floor(7.9) = 7	floor(-7.1) = -8
