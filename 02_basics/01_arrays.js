@@ -14,6 +14,9 @@ myArr3.push("ball")
 console.log(myArr3);//[ 1, 2, 3, 'bat', 'ball' ]              
 myArr3.pop()
 console.log(myArr3);//removes last value,[ 1, 2, 3, 'bat']
+//----------------------------------------------------------------------
+
+//shiftingggg
 
 myArr3.unshift(9);
 console.log(myArr3);//[ 9, 1, 2, 3, 'bat' ]
@@ -23,6 +26,10 @@ console.log(myArr3);//[ 1, 2, 3, 'bat' ]
 
 myArr3.shift();
 console.log(myArr3);//[ 2, 3, 'bat' ]
+
+
+
+----------------------------------------------------------------------
 
 console.log(myArr3.includes(9));
 console.log(myArr3.indexOf("bat"));
