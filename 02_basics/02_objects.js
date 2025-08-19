@@ -31,7 +31,7 @@ console.log(mySymbol);//Symbol(my_key)
 
 
 JsUser.email = "ayushman@goggle.com"
-Object.freeze(JsUser)
+//Object.freeze(JsUser)//lock the value
 JsUser.email = "ayushman15@goggle.com"
 console.log(JsUser);
 
@@ -45,3 +45,24 @@ console.log(JsUser);
   lastLoginDays: [ 'monday', [ 'saturday' ] ],
   [Symbol(my_key)]: 'key to unlock'
 }*/
+
+//object.create----->singleton(object has only one instance )
+
+//rn objcet liternals
+
+JsUser.greeting = function(){
+  console.log("hello js user");
+}
+console.log(JsUser.greeting());
+/*hello js user
+  undefined*/
+
+  console.log(JsUser.greeting);//[Function (anonymous)]
+  //function refrence
+
+  
+JsUser.greetingTwo = function(){
+  console.log(`hello js user,${this.name}`)};
+  console.log(JsUser.greetingTwo());
+  /*hello js user,ayushman
+undefined*/
