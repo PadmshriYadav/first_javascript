@@ -124,4 +124,61 @@ const obj5 ={...obj1,...obj2}
 console.log(obj5);//{ '1': 'a', '2': 'b', '3': 'c', '4': 'd', '5': 'e', '6': 'f' }
 
 
-//--------------------------object in arrays------------
+//--------------------------object in arrays/array of objects------------
+
+
+const users = [
+  {
+    id : 1,
+    email : "h@gmail.com"
+  } ,
+  {
+    id : 1,
+    email : "h@gmail.com"
+  } ,
+  {
+    id : 1,
+    email : "h@gmail.com"
+  }     
+]
+
+console.log(users[1]["email"])//h@gmail.com
+
+
+//const obj1 = {1:"a",2:"b",3:"c"}
+
+console.log(Object.keys(obj1))
+//[ '1', '2', '3' ]
+console.log(Object.entries(obj1))
+//[ [ '1', 'a' ], [ '2', 'b' ], [ '3', 'c' ] ]
+
+console.log(obj1.hasOwnProperty(8));
+//false
+console.log(obj1.hasOwnProperty(2));
+//true
+
+
+
+
+//-----------object destructing-------
+
+
+const course = {
+      coursename :"learning javascript",
+      price :"99",
+      courseInstructor: "hitesh"
+}
+
+
+//console.log(course.courseInstructor or ["courseInstructor"])
+
+const {courseInstructor : Instructor} = course
+console.log (Instructor);
+
+//-----------api-------
+
+
+{
+
+  //json..without objectname
+}
