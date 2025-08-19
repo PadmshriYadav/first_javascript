@@ -66,3 +66,62 @@ JsUser.greetingTwo = function(){
   console.log(JsUser.greetingTwo());
   /*hello js user,ayushman
 undefined*/
+
+
+//singleton object
+//const singleuser = new Object()//return {}
+
+//non singleton object
+ const singleuser = {}//return {}
+
+singleuser.id = "imv24cs137"
+singleuser.age = 19
+singleuser.name ="padmshri"
+singleuser["full name"]= "padmshri yadav"
+
+console.log(singleuser);
+/* {
+    id: 'imv24cs137',
+    age: 19,
+    name: 'padmshri',
+    'full name': 'padmshri yadav'
+  }*/
+
+
+
+    const regularUser = {
+      email : "some@gmail.com",
+      fullname : {
+        userfullname :{
+          fisrtname:"padmshri",
+          lastname :"yadav"
+
+        }
+      }
+    }
+
+  console.log(regularUser.fullname.userfullname["fisrtname"])//padmshri
+
+const obj1 = {1:"a",2:"b",3:"c"}
+const obj2 =  {4:"d",5:"e",6:"f"}
+
+const obj3 = {obj1,obj2}
+console.log(obj3);
+/*{
+  obj1: { '1': 'a', '2': 'b', '3': 'c' },
+  obj2: { '4': 'd', '5': 'e', '6': 'f' }
+}
+ */
+const obj4 = Object.assign({},obj1,obj2)// recommended approach for merging objects
+//value will go in {}...{}is target
+//{ '1': 'a', '2': 'b', '3': 'c', '4': 'd', '5': 'e', '6': 'f' }
+console.log(obj4);
+
+//const obj4 = Object.assign(obj1,obj2)
+// the original obj1 object is modified (mutated), and it also becomes the new obj4
+
+const obj5 ={...obj1,...obj2}
+console.log(obj5);//{ '1': 'a', '2': 'b', '3': 'c', '4': 'd', '5': 'e', '6': 'f' }
+
+
+//--------------------------object in arrays------------
