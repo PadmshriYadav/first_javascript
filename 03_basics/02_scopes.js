@@ -28,8 +28,36 @@ function one(){
    two()
 
     }
-    one()//without two one wont give anything
+    one()//without two,one wont give anything
 
     //**********child can take from parents,parents cant take things from child***  */
 
-    
+  if (true) {
+    const username = "happy"
+    if (username === "happy"){
+              const website = " youtube "
+              console.log(username + website);
+    }
+    //console.log(website);
+  }     
+   //console.log(username);                                
+
+   /*happy youtube
+   error..website not define
+   error...username not defined
+   */
+
+
+   //+++++++++++++++++++++++intresting+++++++++++++++=+
+   
+   console.log(addOne(5))//6
+   function addOne(num) {
+          return num + 1
+   }
+   //
+   console.log(addTwo(5))//error
+   const addTwo = function(num){
+    return num + 2
+   }
+
+   addTwo(8)
