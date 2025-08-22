@@ -119,7 +119,85 @@ false
 //deal for iterating over object keys
 
 
-//-----------------------for each------
+//-----------------------for each method------
 
+// array.forEach(element => {
+  
+// });
 
 //You call the forEach() method on an array
+
+const numbers = ["what","the","hell","helli","helleante","helleberry"]
+
+//because its call back,it wouldnt have name
+//to use forEach, you must use a function inside it. The forEach method is designed to take a single function as its argument. This function, known as a callback 
+numbers.forEach(function /*  logItem(item)*/ (item) {
+  console.log(item)
+});
+
+/*what
+the
+hell
+helli
+helleante
+helleberry */
+
+// numbers.forEach( (item) => {
+//   console.log(item)
+// });
+
+
+
+const numb = [10, 20, 30];
+function printDetails(number, index, arr) {
+  console.log(`The number is ${number} at ${index} of  [${arr}].`);
+}
+
+numb.forEach(printDetails);
+/*The number is 10 at 0 of  [10,20,30].
+The number is 20 at 1 of  [10,20,30].
+The number is 30 at 2 of  [10,20,30]. */
+
+
+
+//other way of writing it
+/*const numb = [10, 20, 30];
+
+numb.forEach(function(number, index, arr) {
+  console.log(`The number is ${number} at index ${index} of the array [${arr}].`);
+}); */
+
+
+const myCode =[
+  {
+    languageName: "javascript",
+    languageFile:"js"
+  },
+  {
+    languageName: "javascript",
+    languageFile:"js"
+  },
+  {
+    languageName: "javascript",
+    languageFile:"js"
+  }
+]
+
+myCode.forEach( (n)=>{
+  console.log(n.languageFile)
+});
+
+/*js
+js
+js */
+
+myCode.forEach( (n)=>{
+  console.log(n)
+});
+
+/*{ languageName: 'javascript', languageFile: 'js' }
+{ languageName: 'javascript', languageFile: 'js' }
+{ languageName: 'javascript', languageFile: 'js' }
+ */
+
+
