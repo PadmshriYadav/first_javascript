@@ -26,16 +26,20 @@
         <p>Excepturi, possimus?</p>
 
         <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
+            <li class="list-item">one 1</li>
+            <li class="list-item">two 2</li>
+            <li class="list-item">three 3</li>
         </ul>
     </div>
 
     <script>
-    // Get the element with the ID "main-heading"
+    // Get the element with the ID ".."
     const heading = document.getElementById('main-heading');
     const heading2 = document.getElementById('heading');
+
+
+
+    let listItems = document.getElementsByClassName('list-item');
 
 
     // Change its text content
@@ -43,6 +47,9 @@
     console.log(heading);// <h1 id="main-heading">Hello, World!</h1>
     console.log(heading.textContent);//Welcome to the page!
     console.log(heading2);//null
+
+    console.log(listItems.length);//3
+    console.log(listItems);//HTMLCollection(3) [li.list-item, li.list-item, li.list-item]
   </script>
 </body>
 </html>
@@ -50,3 +57,7 @@
 <!-- document.getElementById('idName') -->
  returns a single Element object.
   If no element with that ID is found, it returns null.
+
+
+  <!-- document.getElementsByClassName('className') -->
+    It returns a live HTMLCollection. array-like object If no elements,it returns an empty HTMLCollection
