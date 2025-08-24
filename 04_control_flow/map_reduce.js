@@ -97,3 +97,20 @@ console.log(newListedNum2)
 
 
 //--------------------reduce
+
+
+const myNums = [1,2,3,4]
+
+const myTotal = myNums.reduce(function (acc,currval){
+    console.log(`acc:${acc} and ${currval}`);
+    return acc +currval
+},0)
+
+
+console.log(myTotal);
+
+/*acc:0 and 1
+acc:1 and 2
+acc:3 and 3
+acc:6 and 4
+10 */
