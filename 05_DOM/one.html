@@ -1,16 +1,52 @@
-//Document Object Model
+<!-- Document Object Model -->
+ /* a document refers to the entire web page that is loaded in the browser.
+  It's the full HTML file, including all its tags, content, and scripts.
+  document is a global object that represents the entire web page*/
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+        }
+        .text{
+            color: beige;
+        }
+    </style>
 </head>
 <body class="bg-black">
-    <div>
+    <div class="text">
         <h1 class="heading"id="title">Lorem ipsum dolor sit amet consectetur.</h1>
+        <h2> natus possimus illum cupiditate sunt, eum nihil at omnis ad animi?</h2>
+        <h1 id="main-heading">Hello, World!</h1>
         <p>Excepturi, possimus?</p>
+
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
     </div>
 
+    <script>
+    // Get the element with the ID "main-heading"
+    const heading = document.getElementById('main-heading');
+    const heading2 = document.getElementById('heading');
+
+
+    // Change its text content
+    heading.textContent = 'Welcome to the page!';
+    console.log(heading);// <h1 id="main-heading">Hello, World!</h1>
+    console.log(heading.textContent);//Welcome to the page!
+    console.log(heading2);//null
+  </script>
 </body>
 </html>
+
+<!-- document.getElementById('idName') -->
+ returns a single Element object.
+  If no element with that ID is found, it returns null.
