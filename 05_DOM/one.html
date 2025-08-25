@@ -162,13 +162,26 @@ console.log(document.querySelector('div > p'));//direct child of div
 // white;">Excepturi, possimus?</p>
 
 
+console.log(document.querySelector('.list-item'));
+//<li class="list-item">"one 1"</li>
+
+
+
 //-----------document.querySelectorAll()-------
 //it returns  array-like collection...otherwise gives an empty static NodeList
      
-     
-     
-     
-     
+
+console.log(document.querySelectorAll('.list-item'));
+/*NodeList(3) [li.list-item, li.list-item, li.list-item]
+0:li.list-item
+1:li.list-item
+2:li.list-item
+length:3
+
+[[Prototype]]:NodeList*/
+
+
+
      </script>
 </body>
 </html>
