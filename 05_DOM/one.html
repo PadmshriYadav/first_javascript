@@ -1,4 +1,9 @@
 <!-- Document Object Model -->
+
+/* to make web pages interactive and dynamic.
+represents the structure of document as a tree of objects*/
+
+
  /* a document refers to the entire web page that is loaded in the browser.
   It's the full HTML file, including all its tags, content, and scripts.
   document is a global object that represents the entire web page*/
@@ -21,9 +26,17 @@
 <body class="bg-black">
     <div class="text">
         <h1 class="heading"id="title">Lorem ipsum dolor sit amet consectetur.</h1>
-        <h2> natus possimus illum cupiditate sunt, eum nihil at omnis ad animi?</h2>
-        <h1 id="main-heading">Hello, World!</h1>
-        <p>Excepturi, possimus?</p>
+        <h2 id="apple" class =" class-one class-two">  eum nihil at omnis ad animi?</h2>
+        <h1 id="main-heading" class="title important">Hello, World!</h1>
+        <h2 id="section-heading"  class="intro main-title"> <img src="srfdfsfdg"  id="child-heading" alt=" this nothing">DOM Manipulation</h2>
+        <p id="my-heading">Excepturi, possimus?</p>
+        <div id="container">
+         <p>Hello, <strong>world</strong>!</p>
+         <p style="display: none;">Hidden text</p>
+           </div>
+        <div id="greeting">
+           <p>Hello, <strong>world</strong>!</p>
+         </div>
 
         <ul>
             <li class="list-item">one 1</li>
@@ -33,31 +46,109 @@
     </div>
 
     <script>
-    // Get the element with the ID ".."
+    
+//-----------document.getElementById('idName')--------- 
+//  entire tag,returns a single Element object.
+//   If no element with that ID is found, it returns null.
     const heading = document.getElementById('main-heading');
     const heading2 = document.getElementById('heading');
 
-
-
-    let listItems = document.getElementsByClassName('list-item');
-
-
-    // Change its text content
-    heading.textContent = 'Welcome to the page!';
-    console.log(heading);// <h1 id="main-heading">Hello, World!</h1>
-    console.log(heading.textContent);//Welcome to the page!
     console.log(heading2);//null
+    console.log(heading);// <h1 id="main-heading" class="title important">Hello, World!</h1>
 
-    console.log(listItems.length);//3
-    console.log(listItems);//HTMLCollection(3) [li.list-item, li.list-item, li.list-item]
-  </script>
+
+
+
+//  ---- document.getElementById('idName').id -----
+//    used to get  value of the id attribute of that element as a string.
+
+  console.log(document.getElementById('main-heading').id);//"main- heading"
+
+
+
+
+//   //  ---- document.getElementById('idName').className -----
+//    get or set the class attribute of an element.
+//    returns a single string containing all class names of element with space
+// it overwrites the full string of the class attribute.
+
+const heading3 = document.getElementById('apple').className
+console.log(heading3);//class-one class-two
+document.getElementById('apple').className = "new-title";
+console.log(document.getElementById('apple').className);//new-title
+
+
+
+//-------------.getAttribute('attributeName')---------
+//  retrieve the value of any attribute, not just class or id ,href of link,src of image.
+//getAttribute() is a method of an element object,element.id property of an element
+// if attribute is not found,returns null
+
+const image = document.getElementById('child-heading').getAttribute('src');
+console.log(image);//srfdfsfdg
+
+
+
+// --- document.getElementsByClassName('className') ----
+//     It returns a live HTMLCollection. array-like object If no elements,it returns an empty HTMLCollection
+
+let listItems = document.getElementsByClassName('list-item');
+console.log(listItems);//HTMLCollection(3) [li.list-item, li.list-item, li.list-item]
+ console.log(listItems.length);//3
+
+    
+// ------------.style------
+//get or set the inline CSS styles for that element.does not read styles from external or internal style sheets 
+
+const stylee = document.getElementById('my-heading');
+// Set the inline background color and font size
+stylee.style.backgroundColor = 'blue';
+stylee.style.fontSize = '24px';
+stylee.style.color = 'white';
+
+// Get the value of the backgroundcolor
+const myBorderStyle = document.getElementById('my-heading').style.backgroundColor;
+console.log(myBorderStyle);//blue
+    
+
+
+//---------.textContent-----
+//gets visible text n sets the text content of an element and all its descendants.
+//completely ignores HTML tags n their attributes,display the tags as plain text .
+// if no text for textContent to return, it returns an empty string.
+
+console.log(document.getElementById('greeting'));//<div id="greetn> <p>..</div>
+const mtext = document.getElementById('title').textContent;
+console.log(mtext);//Lorem ipsum dolor sit amet consectetur.
+
+// const greetingDiv = document.getElementById('greeting').textContent = 'Welcome!';
+// console.log(greetingDiv);
+// it replaces everything inside the element with plain text. This includes any nested HTML tags, comments, and other content.
+console.log(document.getElementById('greeting'));//<div id="greetn> welcom!</div>
+    
+//--------.innerHTML-----
+// gets or sets the entire HTML+text..display:none
+const container = document.getElementById('container');
+console.log(container.innerHTML);
+// <p>Hello, <strong>world</strong>!</p>"
+
+
+//innertext
+//text visible to user
+     
+     
+     
+     
+     
+     
+     
+     </script>
 </body>
 </html>
 
-<!-- document.getElementById('idName') -->
- returns a single Element object.
-  If no element with that ID is found, it returns null.
 
 
-  <!-- document.getElementsByClassName('className') -->
-    It returns a live HTMLCollection. array-like object If no elements,it returns an empty HTMLCollection
+ 
+
+
+  
