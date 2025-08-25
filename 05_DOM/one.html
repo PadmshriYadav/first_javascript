@@ -130,13 +130,40 @@ console.log(document.getElementById('greeting'));//<div id="greetn> welcom!</div
 // gets or sets the entire HTML+text..display:none
 const container = document.getElementById('container');
 console.log(container.innerHTML);
-// <p>Hello, <strong>world</strong>!</p>"
+// <p>Hello, <strong>world</strong>!</p>
+        //  <p style="display: none;">Hidden text</p>
 
 
-//innertext
+//------.innertext------
 //text visible to user
+
+console.log(container.innerText); //Hello, world!
      
-     
+
+//----------document.querySelector()----
+
+// returns the "first" element that matches a specified CSS selector
+// If no element match, it returns null 
+console.log(document.querySelector('#title'));//id
+//<h1 class="heading" id="title">Lorem ipsum dolor sit amet consectetur.</h1>
+
+console.log(document.querySelector('.heading'));//class
+//<h1 class="heading" id="title">Lorem ipsum dolor sit amet consectetur.</h1>
+
+console.log(document.querySelector('div'));//tag
+//<div class="text">…</div>trong>!</p>
+
+console.log(document.querySelector('div.section-heading#intro'));//mixeddd
+//null
+
+
+console.log(document.querySelector('div > p'));//direct child of div
+//<p id="my-heading" style="background-color: blue; font-size: 24px; color: 
+// white;">Excepturi, possimus?</p>
+
+
+//-----------document.querySelectorAll()-------
+//it returns  array-like collection...otherwise gives an empty static NodeList
      
      
      
