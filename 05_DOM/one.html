@@ -28,7 +28,9 @@ represents the structure of document as a tree of objects*/
         <h1 class="heading"id="title">Lorem ipsum dolor sit amet consectetur.</h1>
         <h2 id="apple" class =" class-one class-two">  eum nihil at omnis ad animi?</h2>
         <h1 id="main-heading" class="title important">Hello, World!</h1>
-        <h2 id="section-heading"  class="intro main-title"> <img src="srfdfsfdg"  id="child-heading" alt=" this nothing">DOM Manipulation</h2>
+        <!-- //src = srfdfsfdg -->
+        <h2 id="section-heading"  class="intro main-title"> <img src=" "
+            id="child-heading" alt=" this is nothing">DOM Manipulation</h2>
         <p id="my-heading">Excepturi, possimus?</p>
         <div id="container">
          <p>Hello, <strong>world</strong>!</p>
@@ -188,13 +190,24 @@ tempList.forEach( item => {
 });
 
 //converting in array
-console.log(Array.from(tempList));
-/*Array(3)
+
+const aree = Array.from(tempList)
+console.log(aree);
+/*(3)  [li.list-item, li.list-item, li.list-item] //array
 0: li.list-item
 1: li.list-item
 2: li.list-item
 length: 3[[Prototype]]: Array(0)
 */
+
+const newAree = aree.map( function (l) {      //.map() method returns a new array,
+    l.style.color ="red";                  //Standard Fn: function(l) { ... }
+          return l;                         //Arrow Fn: (l) => { ... }
+    });
+console.log(newAree);
+
+/* */
+    
 
 
      </script>
