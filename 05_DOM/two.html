@@ -12,6 +12,13 @@
             <div class="day">Wednesday</div>
             <div class="day">thursday</div>
         </div>
+
+        
+        <ul id="my-list">
+         <li>Item 1</li>
+         <li>Item 2</li>
+       </ul>
+
 </body>
 <script>
     const parent = document.querySelector(".parent");
@@ -37,5 +44,13 @@ console.log(dayOne);////<div>Monday</div>
 console.log(dayOne.parentElement);//<div class="parent">…</div>
 console.log(dayOne.nextElementSibling);
 //<div class="day" style="color: orange;">Tuesday</div>
+
+//This includes all child elements, text nodes (whitespace and comment nodes.
+
+const list = document.getElementById('my-list');
+
+// This will include whitespace text nodes
+console.log(list.childNodes.length); // Output: 5
+console.log("nodes:",parent.childNodes);//nodelist(9)
 </script>
 </html>
