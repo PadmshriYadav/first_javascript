@@ -171,8 +171,10 @@ console.log(document.querySelector('.list-item'));
 //it returns  array-like collection...otherwise gives an empty static NodeList
      
 
-console.log(document.querySelectorAll('.list-item'));
-/*NodeList(3) [li.list-item, li.list-item, li.list-item]
+
+ const tempList = document.querySelectorAll('.list-item')
+console.log( tempList);
+/*NodeList(3) [li.list-item, li.list-item, li.list-item]  //not an array
 0:li.list-item
 1:li.list-item
 2:li.list-item
@@ -180,6 +182,19 @@ length:3
 
 [[Prototype]]:NodeList*/
 
+tempList.forEach( item => {
+         item.style.backgroundColor ="green"
+
+});
+
+//converting in array
+console.log(Array.from(tempList));
+/*Array(3)
+0: li.list-item
+1: li.list-item
+2: li.list-item
+length: 3[[Prototype]]: Array(0)
+*/
 
 
      </script>
