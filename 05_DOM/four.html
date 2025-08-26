@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: azure;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    const myList = document.createElement("li") //reateElement() must be a string
+    const textNode = document.createTextNode( "python")
+    myList.appendChild(textNode)
+
+    // 4. Select the <ul> element to add the new <li> to
+    const languageList = document.querySelector('.language');
+ languageList.appendChild(myList)
+
+ myList.setAttribute('style' ,"color : green; ")
+
+ //edit
+ const elemnt = document.querySelector("li:nth-child(2)")
+ elemnt.innerHTML ="mojo"
+console.log(document.querySelectorAll("li"));
+
+const newli = document.createElement("li")
+newli.textContent = "density"
+elemnt.replaceWith(newli)
+</script>
+</html>
