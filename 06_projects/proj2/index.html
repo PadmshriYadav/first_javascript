@@ -80,7 +80,7 @@
              const height = parseFloat(inputheight.value)
              const weight = parseFloat(inputweight.value)
 
-             if (isNaN(height) || isNaN(weight)) {
+             if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
             result.innerHTML = `<span>Please enter a valid height and weight.</span>`;
              ;
              return;}
