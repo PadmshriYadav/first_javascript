@@ -79,6 +79,12 @@
             console.log(e);
              const height = parseFloat(inputheight.value)
              const weight = parseFloat(inputweight.value)
+
+             if (isNaN(height) || isNaN(weight)) {
+            result.innerHTML = `<span>Please enter a valid height and weight.</span>`;
+             ;
+             return;}
+             
             const bmi = (weight / (height * height)).toFixed(2);
            
             result.innerHTML = `<span>Your BMI is: ${bmi}</span>`
@@ -94,4 +100,5 @@
 
 <!-- NOTE -->
  <!-- If the string cannot be converted into a number ,if the user types "abc",
-  it will return NaN (Not a Number). -->
+  it will return NaN (Not a Number).
+   return exits the funtion -->
