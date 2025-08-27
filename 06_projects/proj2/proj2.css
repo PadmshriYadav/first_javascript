@@ -1,0 +1,28 @@
+
+    .big-box{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .input{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        margin: 10px;
+
+        
+    }
+    .chart{
+        border:2px dashed black;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    button{
+        cursor: pointer;
+        padding: 5px;
+    }
