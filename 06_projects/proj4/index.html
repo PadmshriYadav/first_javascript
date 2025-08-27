@@ -73,14 +73,19 @@
     //remaning chnces to guesse
      const chances = document.querySelector("#chances")
     
+        prevGuess =[]
 
-
-    submit.addEventListener("click", function (){
+    submit.addEventListener("click", function (e){
+         e.preventDefault();
 
         //user guessed number 
-    const input = document.querySelector("#inputguess").value
+        const input = document.querySelector("#inputguess").value
+        validateGuess(input)
 
-        if(isNaN(input) || input ===""){
+         });
+
+        function validateGuess(input){       
+        if(isNaN(input) || input ==="" || input <0 || input >100){
 
             msg.innerHTML =`<span>invalid input</span>`
         }
@@ -95,14 +100,25 @@
             }
             else if (inputNumber> random) {
                 msg.innerHTML =`<span>Number is too high</span>`
+            } 
+            
+            else{
+            prevGuess.push(inputNumber)
+            if(numGuess === 11){
+                displayGuess(guess)
+                displayMessage(`game over.Random number was ${random}`)
+                endGame()
+
             }
 
- 
-        
 
-        }
 
-    });
+            }
+
+        } 
+    }
+
+   
     
     
 

@@ -1,0 +1,21 @@
+
+     .outer-box{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+
+     }
+     #inputguess{
+        padding: 10px;
+
+     }
+
+     .result{
+        background-color: bisque;
+        padding: 6px;
+        border: 2px solid slategray;
+        margin: 10px;
+        
+     }
