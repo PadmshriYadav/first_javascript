@@ -1,0 +1,47 @@
+
+    body{
+        overflow: hidden;
+    }
+    
+    .outer-box{
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center; 
+        min-height: 100vh;
+
+    }
+    #buttons > div{
+        border: 2px solid black;
+        padding: 60px;
+        cursor: pointer;
+        }
+    #buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        gap:10px;
+        height: fit-content;
+
+    }
+    div{
+        font-size: large;
+        text-align: center;
+    }
+
+    #orange{
+    background-color: orangered;
+
+}
+#green{
+    background-color: green;
+
+}
+#white{
+    background-color: white;
+
+}
+#yellow{
+    background-color: yellow;
+
+}

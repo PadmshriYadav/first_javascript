@@ -4,92 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change the Background Color</title>
+    <link rel="stylesheet" href="proj1.css">
 </head>
 
-<style>
 
-    body{
-        overflow: hidden;
-    }
-    
-    .outer-box{
-        display: flex;
-        flex-direction: column;   
-        justify-content: center;
-        align-items: center; 
-        min-height: 100vh;
-
-    }
-    #buttons > div{
-        border: 2px solid black;
-        padding: 60px;
-        cursor: pointer;
-        }
-    #buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        gap:10px;
-        height: fit-content;
-
-    }
-    div{
-        font-size: large;
-        text-align: center;
-    }
-
-
-   
-</style>
 
 <body>
     <div class="outer-box">
         <h1>Color Scheme Switcher</h1>
         <div id="buttons">
-            <div style="background-color: orangered;" id="orange" class="color">orange</div>
-            <div style="background-color: yellow;" class="color" id="yellow">yellow</div>
-            <div style="background-color: green;"class="color" id="green">green</div>
-            <div style="background-color: white;"class="color" id="white">white</div>
+            <div  id="orange" class="color">orange</div>
+            <div  class="color" id="yellow">yellow</div>
+            <div class="color" id="green">green</div>
+            <div class="color" id="white">white</div>
         </div>
 
         <p>Try clicking on one of the colors above to change the background color of the page.</p>
     </div>
 </body>
-<script>
-     let colors = document.querySelectorAll(".color")
-     console.log(colors);
 
-     colors.forEach( (color)=>{
-         console.log(color);
-         color.addEventListener("click",(e)=>{ 
-            console.log(e);
-            console.log(e.target)
 
-            switch (e.target.id) {
-                case "orange":
-                    document.querySelector("body").style.backgroundColor =" orange"
-                    break;
-
-                 case "yellow":
-                    document.querySelector("body").style.backgroundColor =" yellow"
-                    break;    
-                case "green":
-                document.querySelector("body").style.backgroundColor =" green"
-                break;
-
-                 case "white":
-                document.querySelector("body").style.backgroundColor ="white"
-                break;
-
-                default:
-                     document.querySelector("body").style.backgroundColor ="white"
-
-            }
-         })
-     });
-
-     
-
-</script>
+<script src="proj1.js" defer></script>
 
 </html> 
