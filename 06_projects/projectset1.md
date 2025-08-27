@@ -38,6 +38,29 @@ console.log("padmshri yadav")
          })
      });
 
+```
+
+## Project 2
+
+```javascript
+
+
+<script>
+    const input = document.querySelector("#go")
+    const inputheight = document.getElementById("height")
+   
+    const inputweight = document.getElementById("weight")
+    
+    const result =document.querySelector("#result")
+
+        input.addEventListener("click",(e)=>{ 
+            console.log(e);
+             const height = parseFloat(inputheight.value)
+             const weight = parseFloat(inputweight.value)
+            const bmi = (weight / (height * height)).toFixed(2);
+           
+            result.innerHTML = `<span>Your BMI is: ${bmi}</span>`
+            });
      
 
 </script>
