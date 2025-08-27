@@ -1,0 +1,71 @@
+<!-- when event occurs, the browser creates an "event object" that contains informationig click about the event itself
+//event handler  the event occurs, the listener executes a function -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body>
+    <h1>images</h1>
+    <div>
+        <ul id ="images">
+             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+             <li><a style="color: rgb(3, 43, 78);" href="https://google.com" id="google">Google</a></li>
+
+        </ul>
+    </div>
+</body>
+
+<script>
+//  document.getElementById('owl').onclick = function(){
+//    alert("owl clicked")}
+
+document.getElementById('images').addEventListener('click', function(e){
+       console.log("clicked inside the ul"); }, false)
+
+
+// document.getElementById('owl').addEventListener('click', function(e){
+//        console.log("owl clicked"); }, false)
+//false       
+//first "owl click" then "clicked inside the ul"
+//event pprogation..bubling
+// -------
+//true
+//first "clicked inside the ul" then "owl click" 
+//event pprogation..capturing
+
+document.getElementById('owl').addEventListener('click', function(e){
+       console.log("owl clicked"); 
+       // e.stopPropagation()//wont bubble...give only owl
+    }, false)
+
+document.getElementById("google").addEventListener('click',(e) => {
+    console.log("google clicked")
+    console.log(e)
+    e.preventDefault();//wont go to server
+    //  e.stopPropagation()
+                                
+})
+
+ document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode.remove()
+        }
+    
+        
+    })
+
+// e will info about the whole page...
+// bt target will give info about the clicked element...
+// parent  node will give the parent tag of element  clicked
+// tagName returns its HTML tag name in uppercase.
+</script>
+</html>
