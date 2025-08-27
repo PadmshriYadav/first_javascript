@@ -1,0 +1,14 @@
+
+    .outer-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+    #clock{
+        background-color: rgb(196, 104, 38);
+        padding: 16px;
+        border-radius: 5px;
+
+    }

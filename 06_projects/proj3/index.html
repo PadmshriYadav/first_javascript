@@ -4,26 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>digital box</title>
+   
+    <link rel="stylesheet" href="proj3.css">
 </head>
 
-<style>
-    .outer-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    }
-    #clock{
-        background-color: rgb(196, 104, 38);
-        padding: 16px;
-        border-radius: 5px;
 
-    }
-
-
-
-</style>
 
 
 <body>
@@ -35,17 +20,7 @@
     
 </body>
 
-<script>
-
-    let clock= document.querySelector("#clock");
-    
-    setInterval( function () {
-        let date = new Date();
-        clock.innerHTML = date.toLocaleTimeString();
-        
-    },1000)
-    
-</script>
+<script src="proj3.js"></script>
 </html>
 
 <!-- note -->
