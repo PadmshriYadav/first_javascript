@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Numbers</title>
+</head>
+
+<style>
+     .outer-box{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+
+     }
+     #inputguess{
+        padding: 10px;
+
+     }
+
+     .result{
+        background-color: bisque;
+        padding: 6px;
+        border: 2px solid slategray;
+        margin: 10px;
+        
+     }
+
+  
+</style>
+<body>
+    <div class="outer-box">
+         <h2>Number Guessing Game</h2>
+        <div><p>try and guess a random number between 1 and 100. </p> 
+        <p>you have 10 attempts to guess the right number. </p></div>
+
+        <div class="inner-box">
+            <h1>guess a number:</h1>
+            <input type="number" id="inputguess">
+            <button class="button" id="submit" >submit your guess</button>
+           
+            <div class="result">  progress message </div>
+
+            <div  id="previous">previous guesses:</div>
+            <div id="chances">remaining chances:</div>
+        </div>
+
+        
+    </div>
+
+    
+</body>
+<script>
+    //random generated number
+    const random = parseInt((Math.random()*100)+1);
+
+    
+
+    //submitting gussed number 
+    const submit=document.querySelector("#submit")
+
+
+
+    //message
+    const msg =document.querySelector(".result")
+    
+
+    // list of guessed numbers
+    const gussedNumbers = document.querySelector("#previous")
+
+    //remaning chnces to guesse
+     const chances = document.querySelector("#chances")
+    
+
+
+    submit.addEventListener("click", function (){
+
+        //user guessed number 
+    const input = document.querySelector("#inputguess").value
+
+        if(isNaN(input) || input ===""){
+
+            msg.innerHTML =`<span>invalid input</span>`
+        }
+        else {
+
+            const inputNumber =parseInt(input);
+            if ( inputNumber===random){
+                msg.innerHTML =`<span>you guessed it write</span>`
+            }
+            else if (inputNumber< random) {
+                msg.innerHTML =`<span>Number is too low</span>`
+            }
+            else if (inputNumber> random) {
+                msg.innerHTML =`<span>Number is too high</span>`
+            }
+
+ 
+        
+
+        }
+
+    });
+    
+    
+
+</script>
+</html>
