@@ -1,7 +1,7 @@
 
     const adding =document.querySelector("#task")
     const addButton =document.querySelector("#add")
-    const list = document.querySelector("#here")
+    
     const book = document.querySelector(".book")
     
 
@@ -25,12 +25,8 @@
             const taskItem = e.target.parentElement;
             deletingTask(taskItem)
         }
- 
-
     });
     
-   
-
     function deletingTask(taskElement){
         book.removeChild(taskElement);
     }
