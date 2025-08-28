@@ -1,0 +1,37 @@
+
+    const adding =document.querySelector("#task")
+    const addButton =document.querySelector("#add")
+    const list = document.querySelector("#here")
+    const book = document.querySelector(".book")
+    
+
+    addButton.addEventListener("click", function (e) {
+        const taskText = adding.value
+            addingTask(taskText)
+            adding.value = ""
+        
+    });
+
+     function addingTask(taskText){
+        const newtask = document.createElement("li");
+        newtask.innerHTML = `${taskText} <button> deleted it</button>`
+        book.appendChild(newtask)
+    }
+
+       
+    book.addEventListener("click", function(e) {
+
+        if (e.target.tagName === 'BUTTON') {
+            const taskItem = e.target.parentElement;
+            deletingTask(taskItem)
+        }
+ 
+
+    });
+    
+   
+
+    function deletingTask(taskElement){
+        book.removeChild(taskElement);
+    }
+
