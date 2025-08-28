@@ -20,15 +20,16 @@
     //remaning chnces to guesse
      const chances = document.querySelector("#chances")
 
-     const newGameContainer = document.querySelector('.new-game-container');
+     //new game button
+     const newGame = document.querySelector('#newGame');
     
     let prevGuess =[]
     let numGuess =1
-     let playGame = true;
+    
 
     chances.innerHTML = `${11 - numGuess}`;
 
-    if(playGame){
+    
     submit.addEventListener("click", function (e){
          e.preventDefault();
 
@@ -37,7 +38,7 @@
         validateGuess(input)
 
          });
-    }
+    
 
 
     
@@ -53,7 +54,7 @@
             const inputNumber =parseInt(input);
              prevGuess.push(inputNumber)
 
-              if(numGuess === 11){
+              if(numGuess === 10){
                 displayGuess(inputNumber)
                 displayMessage(`game over.Random number was ${random}`)
                 endGame()}
@@ -92,5 +93,19 @@
     function endGame(){
         userinput.value = ''
         userinput.disabled = true;
-        submit.disabled = true;  
+        submit.disabled = true; 
+        
     }
+    
+    newGame.addEventListener("click",( )=>{
+             newGameStart( )
+        
+        
+    });
+function newGameStart(){
+    userinput.value = ''
+    numGuess =0
+    displayGuess(`restarted game`)
+
+
+}
