@@ -105,7 +105,10 @@
 function newGameStart(){
     userinput.value = ''
     numGuess =0
-    displayGuess(`restarted game`)
+   gussedNumbers.innerHTML =`restarted game : ` 
+   displayGuess()
+   gussedNumbers.textContent.replace("undefined,","")
+            
 
 
 }
