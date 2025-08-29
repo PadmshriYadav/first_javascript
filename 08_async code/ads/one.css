@@ -1,0 +1,13 @@
+#pop{
+    padding: 20px;
+    background-color: red;
+    font-size: larger;
+    border-radius: 38px;
+    font-weight:bold;
+    text-decoration: underline;
+    
+}
+
+#title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
