@@ -11,7 +11,7 @@ const button = document.querySelector("#button")
 
 const title = document.querySelector("#title")
 
-setInterval(() => {
+ function colorChng() {
     
 
     if (button.style.backgroundColor === 'red') {
@@ -19,24 +19,31 @@ setInterval(() => {
     } else {
         button.style.backgroundColor = 'red';
     }
-}, 1000); 
 
-closebox();
+ }
+const chngeColor = setInterval( colorChng  , 1000); 
+
+  // closebox();
 
 
 button.addEventListener("click",(e)=>{
          openbox();
+         
   });
 
 
   function openbox(){
+    clearInterval(chngeColor)
+     
     title.innerHTML = '<br> Engineered for creators with a stunning high-resolution display, powerful processing, and a seamless workflow for editing, design, and rendering.';
 
-    title.innerHTML +='<button id ="close"> close </button>';
+    title.innerHTML +='<br><button id ="close"> close </button>';
 
     const close=document.getElementById("close");
       close.addEventListener("click",(e)=>{
+       
         closebox()
+        
   });
 
         
@@ -44,6 +51,8 @@ button.addEventListener("click",(e)=>{
 
   function closebox(){
     title.innerHTML="lets see whats there";
+   const chngeColor = setInterval( colorChng  , 1000); 
+    
 
 
   };
