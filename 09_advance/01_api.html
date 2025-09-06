@@ -1,0 +1,54 @@
+//Making an API call---->process of sending a request to a server to get a response. 
+//u send a message to the API's server. This request typically includes the API's URL
+// pre-built objects and classes provided by the browser.like XMLHttpRequest
+
+<!-- const car = new Object();, you are creating a generic, empty object using the built-in Object class. You then add properties like make, model, and year to it.const car = new Object();
+
+car.make = 'Toyota';
+car.model = 'Camry';
+car.year = 2022;
+
+console.log(car.make); // 'Toyota' -->
+ <!--XMLHttpRequest Class: This is a specific, specialized class for a single purpose. It comes pre-packaged with all the tools needed for that task. It's like a specialized tool—a wrench, not a customizable box.  -->
+ <!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: blue">
+   0 (UNSENT): The open() method has not been called yet.
+
+1 (OPENED): The open() method has been called. The request is initialized.
+
+2 (HEADERS_RECEIVED): The send() method has been called, and the response headers are available.
+
+3 (LOADING): The response body is being downloaded. You might get partial data.
+
+4 (DONE): The request is complete, and the entire response has been received.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    //prepare the xhr object for a request.
+    // use the GET method to fetch data from this specific GitHub API URL
+    xhr.open('GET', requestUrl) 
+
+    //event handler that gets triggered every time the readyState of the request changes.
+    //readyState that tracks the status 1...2..3..4...
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)//JSON string------>JavaScript object.
+
+
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+    xhr.send();
+</script>
+</html>
