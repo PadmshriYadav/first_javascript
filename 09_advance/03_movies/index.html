@@ -1,0 +1,61 @@
+<!-- // XMLHttpRequest and Fetch are used when you need to programmatically retrieve data from an API and then process that data in your JavaScript code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>movie name</title>
+    </head>
+    <body>
+        <h2 >NAME OF movie:</h2> 
+        <input type="text" id="text"> typeee it
+        <button id="search">Search</button>
+        <p id="movie"></p>
+
+    </body>
+    </html>
+    
+</body>
+<script>
+    const name = document.getElementById('text');
+    const movie = document.querySelector("#movie");
+    const button = document.getElementById('search');
+
+    button.addEventListener('click', function() {
+
+    const url = `http://www.omdbapi.com/?apikey=<YOUR_API_KEY>&t=${name.value}`
+
+     const xhr = new XMLHttpRequest();
+
+     xhr.open('GET', url, true);
+
+     //true in xhr.open() specifies that the request should be asynchronous
+
+     // handle the data
+     xhr.onreadystatechange = function() {
+        
+    if (xhr.readyState === 4) {
+    const data = JSON.parse(xhr.responseText);
+    console.log(data);
+
+    if (data.Response === "True") {
+        movie.innerText = `Title: ${data.Title}, Year: ${data.Year}`;
+        } 
+    else {
+         movie.innerText = `Movie not found: ${name.value}`;
+            }
+     }}
+      xhr.send();
+    });
+
+
+</script>
+</html>
