@@ -1,0 +1,20 @@
+
+        #box{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .text{
+            font-size:x-large;
+            font-weight: bold;
+            
+
+        }
+        #start,#close{
+
+            padding: 10px;
+            border-radius: 10px;
+        }
+
