@@ -12,6 +12,7 @@
 async function eatPizza() {
     try{
     console.log("Patient for pizza...");
+    //value from the promise is assigned to the 'pizza'
     const pizza = await getPizza(); //wait till resolve "here ur pizaa "...otherwise will throw error
     console.log(pizza);
     }
