@@ -2,6 +2,7 @@
 
 //setTimeout----after a time display it,returns an ID
 //setInterval--- repeat itself after fix time
+//clearInterval
 //clearTimeout() cancel setTimeout() call before it runs
 
 
@@ -22,7 +23,7 @@ const title = document.querySelector("#title")
 
  }
 
-const chngeColor = setInterval( colorChng  , 1000);
+let chngeColor = setInterval( colorChng  , 1000);
 
 
 button.addEventListener("click",(e)=>{
