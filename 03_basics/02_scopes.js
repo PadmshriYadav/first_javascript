@@ -176,7 +176,9 @@ console.log(addNum3(7,6,8));//{ sum: 21, user: 'hitesh' }
 //named fe
 (function chai() {
     console.log('DB CONNECTED');
-})();
+})
+
+();
 
 
 
@@ -190,4 +192,7 @@ console.log(addNum3(7,6,8));//{ sum: 21, user: 'hitesh' }
 
 ((name) => {
     console.log(`hii ${name}`);
-})("shreya");//hii shreya
+})
+
+
+("shreya");//hii shreya
