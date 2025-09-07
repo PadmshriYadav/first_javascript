@@ -14,7 +14,7 @@ const students = {
 //--------------------------------------------------------------------------
 
 
-
+// Define the Constructor Function
 
 function User(username, loginCount, isLoggedIn){
     this.username = username;
@@ -32,6 +32,8 @@ function User(username, loginCount, isLoggedIn){
 // new keyword---->A brand-new, empty object is created in memory
 //User function is executed--->this is bound to that new, empty object
 
+
+//Create Object Instances
 const userOne = new User("hitesh", 12, true)
 const userTwo = new User("ChaiAurCode", 11, false)
 console.log(userOne.constructor);//[Function: User]
